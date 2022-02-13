@@ -1,0 +1,32 @@
+header.header 
+    .header__row 
+        .header__logo  
+            a.logo(href="/")
+                include ../../img/logo.svg
+
+        button.menu-btn(aria-label="menu")
+            span.menu-btn__icon
+        
+        nav.header__nav 
+            ul.main-menu 
+                li.main-menu__item
+                    a.main-menu__link(href="#")
+                        | Тарифы
+                li.main-menu__item
+                    a.main-menu__link(href="#")
+                        | Как внедрить
+                li.main-menu__item
+                    a.main-menu__link(href="#")
+                        | Блог
+                li.main-menu__item
+                    a.main-menu__link(href="#")
+                        | Карьера
+                li.main-menu__item
+                    a.main-menu__link(href="#")
+                        | API
+                li.main-menu__item.main-menu__item--btn
+                    a.btn.btn--primary(href="#")
+                        | Заказать презентацию
+                li.main-menu__item.main-menu__item--btn
+                    a.btn(href="#")
+                        | Войти

@@ -1,0 +1,116 @@
+.intro 
+    padding: 120px 0 195px
+    background-color: #CEF8FF 
+    overflow-x: hidden
+    &__row 
+        display: grid 
+        grid-template-columns: repeat(12, 1fr)
+        gap: 24px
+    
+    &__left 
+        grid-column: span 7
+
+    &__right
+        grid-column: span 5
+
+    &__title 
+        margin-bottom: 20px
+        font-size: 60px
+        line-height: 68px
+        letter-spacing: -0.01em
+
+    &__text
+        max-width: 590px
+        font-weight: 600
+        font-size: 22px
+        line-height: 34px
+        letter-spacing: -0.01em
+    
+    &__image 
+        margin-left: -36px
+
+.intro-tags 
+    position: relative
+    display: flex 
+    flex-wrap: wrap 
+    margin: 0 0 23px
+    padding: 0
+    list-style: none
+    z-index: 1
+    &__item 
+        position: relative
+        display: inline-block
+        padding: 6px 12px
+        margin-right: 13px
+        border: 2px solid #000
+        border-radius: 4px
+        font-weight: 500
+        font-size: 22px
+        line-height: 24px
+        letter-spacing: -0.01em
+        &:last-child 
+            margin-right: 0
+        &::before 
+            content: ''
+            width: calc(100% + 4px)
+            height: calc(100% + 4px)
+            position: absolute
+            top: 5px
+            left: 5px
+            border-radius: 4px
+            background: #7AE1F2
+            z-index: -1
+        &--active 
+            &::before 
+                background: #FFE079
+
+@media (max-width: 1200px)
+    .intro
+        &__title
+            font-size: 50px 
+            line-height: 58px
+
+@media (max-width: 991px)
+    .intro
+        padding: 80px 0
+        &__title
+            font-size: 40px 
+            line-height: 48px
+
+    .intro-tags
+        &__item 
+            padding: 4px 8px
+            font-size: 16px 
+            line-height: 20px
+
+@media (max-width: 767px)
+    .intro
+        padding: 30px 0 228px
+        &__left, &__right 
+            grid-column: span 12
+
+        &__title 
+            margin-bottom: 12px
+            font-size: 27px
+            line-height: 32px
+        
+        &__text 
+            font-size: 16px 
+            line-height: 24px
+        
+        &__image 
+            margin: 0
+            padding: 24px
+            text-align: center
+            img 
+                max-width: 100%
+
+    .intro-tags 
+        margin-bottom: 12px
+        &__item
+            padding: 3px 6px
+            font-size: 14px 
+            line-height: 16px
+            &::before 
+                top: 4px
+                left: 4px
